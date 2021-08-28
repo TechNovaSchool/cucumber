@@ -67,3 +67,21 @@ CucumberOptions (from the runner class)
             --false: this will run the tests and steps will ve executed
 
     tags : allow us to group my test
+----------------------------------------
+
+MAC: CMD+option+l
+Windows: Ctrl + Alt + L
+
+Cucumber Hooks
+--> We are using for setup and tearDown method 
+--> We are using for a proper reporting in cucumber
+--> "Hooks" keyword which our program understand 
+
+The flow of execution :
+  @Before -->Test(Scenario) -->After 
+
+1) Runner will hit the tag
+2) Runner class will determine which feature file need to be executed 
+3) Runner checks if the tags mach inside of the feature file
+4) Runner is looking for step_definitons, and when it finds corresponding ones it will implement them 
+5) Runner will execute step by step our flow 

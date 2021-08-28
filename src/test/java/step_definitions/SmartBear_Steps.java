@@ -34,8 +34,8 @@ public class SmartBear_Steps {
     @Then("User should be logged in and be able to verify Welcome text is displayed")
     public void user_should_be_logged_in_and_be_able_to_verify_welcome_text_is_displayed() {
         String actual = smartBearOrderLandingPage.welcomeMessage.getText();
-        String expectedMessage = "Welcome";
-        System.out.println(actual);
+        String expectedMessage = "Hello"; // Hello is instead of Welcome<-- (correct value)
+        System.out.println("This test was failed in propose");
         Assert.assertTrue(actual.contains(expectedMessage));
     }
 
@@ -48,4 +48,5 @@ public class SmartBear_Steps {
     public void user_should_see_the_error_message_displayed_on_the_page() {
         Assert.assertTrue(smartBearLoginPage.status.isDisplayed());
     }
+
 }
