@@ -37,7 +37,7 @@ public class Google_Steps {
     @Then("I see the title contains pen")
     public void i_see_the_title_contains_pen() {
         String actualTitle = Driver.getDriver().getTitle();
-        String expectedTitle = "water";
+        String expectedTitle = "pen";
         Assert.assertTrue("Title test fail",actualTitle.contains(expectedTitle));
 
     }
