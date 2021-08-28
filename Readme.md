@@ -85,3 +85,14 @@ The flow of execution :
 3) Runner checks if the tags mach inside of the feature file
 4) Runner is looking for step_definitons, and when it finds corresponding ones it will implement them 
 5) Runner will execute step by step our flow 
+
+--------
+Summary for Hooks
+Once ruuner class is triggered , the scenario tag is getting executed
+The Hooks will run before and after each scenario
+if test pass we just see the results, and no any image attched 
+when test fail the image will be added to the step where it has a failure point
+
+byte [] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+
+We are casting our WEbdriver object to TakesScreenshot interface on order to be able to use method which come from interface 
