@@ -96,3 +96,13 @@ when test fail the image will be added to the step where it has a failure point
 byte [] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
 
 We are casting our WEbdriver object to TakesScreenshot interface on order to be able to use method which come from interface 
+
+=======================
+08.31
+
+Parametrization 
+
+1) We ar are able to pass test data directly in feature files
+2) It allows us to run the test with different test data sets
+
+

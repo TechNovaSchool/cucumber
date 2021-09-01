@@ -7,7 +7,6 @@ Feature: Google feature test verifications
     Given I am on google home page
     Then I should see that title contains Google
 
-Feature: Google Test
 
   @TEST_DW-132
   Scenario: Google Test
