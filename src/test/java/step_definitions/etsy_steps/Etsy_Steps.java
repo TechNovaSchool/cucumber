@@ -42,7 +42,5 @@ public class Etsy_Steps {
         String actualTitle = Driver.getDriver().getTitle().toLowerCase();
         String expectedTitle = string.toLowerCase();
         Assert.assertTrue(actualTitle.contains(expectedTitle));
-
     }
-
 }

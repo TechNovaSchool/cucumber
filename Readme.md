@@ -105,4 +105,20 @@ Parametrization
 1) We ar are able to pass test data directly in feature files
 2) It allows us to run the test with different test data sets
 
+We use a parameter to make test more dynamic and to have a posibility to change the values from
+cucumber file
+
+Background: ---> comes with cucumber library
+It is something which is being applied before each scenario, using Background we can avoid 
+duplicate steps inside of cucumber 
+
+Similar we have @BeforeMethod in TestNG
+
+Scenario Outline
+This allows us to different data sets for one scenario
+It make sense if we want to run this test against multiple data
+
+
+
+
 
