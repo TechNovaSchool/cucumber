@@ -2,7 +2,7 @@
 Feature: Google feature test verifications
   DW-209 Test Plan 21
 
-  #to add comments
+ @test123
   Scenario: Google title verification
     Given I am on google home page
     Then I should see that title contains Google

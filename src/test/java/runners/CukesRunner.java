@@ -6,11 +6,11 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class) //this line will force this to RUN using cucumber
 @CucumberOptions (
-        plugin = {"html:target/cucumber-report.html"},
+        plugin = {"html:target/cucumber-report.html", "rerun:target/rerun.txt"},
         features = "src/test/resources/features",
         glue = "step_definitions",
         dryRun = false,
-        tags = "@smartBearOrder"
+        tags = "@regression"
 )
 
 public class CukesRunner {
