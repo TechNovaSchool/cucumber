@@ -14,10 +14,11 @@ public class APIUtillities {
 
     private static ResponseBody responseBody;
     private static ObjectMapper objectMapper;
+    private static Response response;
 
     public static void hitGET(String resource) {
         String uri = Config.getProperty("baseURL" + resource);
-        Response response = RestAssured.given().header("Authorization", Config.getProperty("token"))
+        response = RestAssured.given().header("Authorization", Config.getProperty("token"))
                 .urlEncodingEnabled(false)
                 .get(uri);
         System.out.println("Status Code: " + response.statusCode());
@@ -36,6 +37,10 @@ public class APIUtillities {
         return responseBody;
     }
 
+    public static Response getResponse() {
+        return response;
+    }
+
 
     public static void hitPOST(String resource, RequestBody body ) {
         String uri = Config.getProperty("baseURL" + resource);
@@ -48,7 +53,7 @@ public class APIUtillities {
             e.printStackTrace();
         }
 
-        Response response = RestAssured.given().header("Authorization", Config.getProperty("token"))
+        response = RestAssured.given().header("Authorization", Config.getProperty("token"))
                 .urlEncodingEnabled(false)
                 .contentType(ContentType.JSON)
                 .body(bodyJson)
@@ -74,7 +79,7 @@ public class APIUtillities {
             e.printStackTrace();
         }
 
-        Response response = RestAssured.given().header("Authorization", Config.getProperty("token"))
+        response = RestAssured.given().header("Authorization", Config.getProperty("token"))
                 .urlEncodingEnabled(false)
                 .contentType(ContentType.JSON)
                 .body(bodyJson)
@@ -92,7 +97,7 @@ public class APIUtillities {
     public static void hitDELETE(String resource, String recordID) {
         String uri = Config.getProperty("baseURL" + resource);
         System.out.println(uri);
-        Response response = RestAssured.given().header("Authorization", Config.getProperty("token"))
+        response = RestAssured.given().header("Authorization", Config.getProperty("token"))
                 .urlEncodingEnabled(false)
                 .queryParam("records[]", recordID)
                 .delete(uri);

@@ -2,7 +2,7 @@
 Feature: Airtable API Test
 
   Scenario:
-    When I hit the GET API I get the correct status
-
+    When I hit the GET API
+    And I check status code is "200"
 
 
