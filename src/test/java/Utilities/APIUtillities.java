@@ -16,6 +16,14 @@ public class APIUtillities {
     private static ObjectMapper objectMapper;
     private static Response response;
 
+    public static ResponseBody getResponseBody() {
+        return responseBody;
+    }
+
+    public static Response getResponse() {
+        return response;
+    }
+
     public static void hitGET(String resource) {
         String uri = Config.getProperty("baseURL" + resource);
         response = RestAssured.given().header("Authorization", Config.getProperty("token"))
@@ -31,14 +39,6 @@ public class APIUtillities {
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
-    }
-
-    public static ResponseBody getResponseBody() {
-        return responseBody;
-    }
-
-    public static Response getResponse() {
-        return response;
     }
 
 

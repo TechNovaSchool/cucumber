@@ -18,7 +18,8 @@ public class Hooks {
     @After
     public void tearDown(Scenario scenario) {
         System.out.println("-The scenario is closing--");
-        if (scenario.isFailed()) {
+
+        if (scenario.isFailed() && Driver.getReference() != null) {
             //We are casting our Webdriver object to TakesScreenshot
             // interface on order to be able to use method which come from interface
             byte [] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);

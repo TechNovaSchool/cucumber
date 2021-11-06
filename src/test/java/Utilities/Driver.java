@@ -18,6 +18,10 @@ public class Driver {
 
     private static WebDriver driver;
 
+    public static WebDriver getReference() {
+        return driver;
+    }
+
     public static WebDriver getDriver() {
         if (driver == null) {
 
@@ -51,10 +55,10 @@ public class Driver {
     }
 
     public static void quitDriver(){
-        if(driver != null) {
-            driver.quit();
-            driver = null;
-        }
+//        if(driver != null) {
+//            driver.quit();
+//            driver = null;
+//        }
     }
 
 }

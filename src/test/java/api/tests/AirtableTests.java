@@ -74,14 +74,11 @@ public class AirtableTests {
     @Test (priority = 3)
     public void UpdateRecord(){
         Fields fields = new Fields();
-        fields.setFirstname("Safarbeg");
-        fields.setLastname("Like API Testing");
-        fields.setPhone("777-999-7777");
         fields.setAddress("999 Test this API");
 
         Record record = new Record();
         record.setFields(fields);
-        record.setId(recordID);
+        record.setId("recv4rVrE1P8DFjS2");
         List<Record> records = new ArrayList<>();
         records.add(record);
 

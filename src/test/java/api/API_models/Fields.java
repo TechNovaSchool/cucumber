@@ -9,7 +9,8 @@ import lombok.Data;
 @Data
 public class Fields {
 
-//    firstname": "Jimmy",
+
+    //    firstname": "Jimmy",
 //            "lastnotes": "James",
 //            "phone": "(224) 316-9699",
 //            "address": "759 Road Drive"
@@ -18,6 +19,7 @@ public class Fields {
     private String address;
     private String phone;
     private String email;
+
 
 
 }
